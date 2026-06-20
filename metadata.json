@@ -1,0 +1,8 @@
+{
+  "name": "AURA | Tel Aviv",
+  "description": "Portfolio website for a luxury villa in Tel Aviv",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
