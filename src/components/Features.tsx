@@ -2,9 +2,9 @@ import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 
 const images = [
-  'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop', // Architecture
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop', // Interior
-  'https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=2000&auto=format&fit=crop'  // Details/Lifestyle
+  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_w6abv9w6abv9w6ab.png', // Architecture
+  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_2fvj0t2fvj0t2fvj.png', // Interior
+  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_l4m92ol4m92ol4m9.png'  // Details/Lifestyle
 ];
 
 export function Features() {

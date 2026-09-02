@@ -11,7 +11,13 @@ export const translations = {
       tagline: "Exclusive Mediterranean Living",
       title: "The Pearl of Tel Aviv",
       subtitle: "A transcendent architectural masterpiece located directly on the Mediterranean coastline. Experience uninterrupted luxury and modern design.",
-      cta: "Discover the Estate"
+      cta: "Discover the Penthouse",
+      stats: [
+        { value: "2-5", label: "bedrooms" },
+        { value: "5", unit: "min", label: "to beach" },
+        { value: "150-400", unit: "sqm", label: "penthouse size" },
+        { value: "3.5", unit: "m", label: "ceilings" }
+      ]
     },
     features: {
       title: "Uncompromising Luxury",
@@ -39,14 +45,14 @@ export const translations = {
     },
     blueprints: {
       title: "Architectural Plans",
-      subtitle: "Explore the spatial continuity and meticulous zoning of the estate.",
-      floor1: "Ground Floor & Pool Deck",
-      floor2: "Master Suites & Terraces",
+      subtitle: "Explore the spatial continuity and meticulous zoning of the penthouse.",
+      floor1: "Main Floor",
+      floor2: "Upper Level & Terrace",
       specs: [
-        { label: "Total Area", value: "850 m²" },
-        { label: "Bedrooms", value: "6 Suites" },
-        { label: "Bathrooms", value: "8" },
-        { label: "Pool", value: "Infinity Edge 25m" }
+        { label: "Total Area", value: "150-400 m²" },
+        { label: "Bedrooms", value: "2-5" },
+        { label: "Bathrooms", value: "2-4" },
+        { label: "View", value: "Panoramic Sea View" }
       ]
     },
     contact: {
@@ -70,7 +76,13 @@ export const translations = {
       tagline: "Эксклюзивная Жизнь у Моря",
       title: "Жемчужина Тель-Авива",
       subtitle: "Архитектурный шедевр на побережье Средиземного моря. Погрузитесь в атмосферу абсолютной роскоши и современного дизайна.",
-      cta: "Исследовать Виллу"
+      cta: "Исследовать Пентхаус",
+      stats: [
+        { value: "2-5", label: "спальни" },
+        { value: "5", unit: "мин", label: "до пляжа" },
+        { value: "150-400", unit: "м²", label: "метраж пентхауса" },
+        { value: "3.5", unit: "м", label: "потолки" }
+      ]
     },
     features: {
       title: "Бескомпромиссная Роскошь",
@@ -99,13 +111,13 @@ export const translations = {
     blueprints: {
       title: "Архитектурные Чертежи",
       subtitle: "Детальная планировка и зонирование пространства.",
-      floor1: "Первый этаж и бассейн",
-      floor2: "Мастер-спальни и террасы",
+      floor1: "Основной этаж",
+      floor2: "Верхний уровень и терраса",
       specs: [
-        { label: "Общая площадь", value: "850 м²" },
-        { label: "Спальни", value: "6 люксов" },
-        { label: "Ванные", value: "8" },
-        { label: "Бассейн", value: "Инфинити 25м" }
+        { label: "Общая площадь", value: "150-400 м²" },
+        { label: "Спальни", value: "2-5" },
+        { label: "Ванные", value: "2-4" },
+        { label: "Вид", value: "Панорамный на море" }
       ]
     },
     contact: {
