@@ -2,39 +2,39 @@ import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 
 const images = [
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_w6abv9w6abv9w6ab.png', // Architecture
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_2fvj0t2fvj0t2fvj.png', // Interior
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_l4m92ol4m92ol4m9.png'  // Details/Lifestyle
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_w6abv9w6abv9w6ab.png', // Architecture
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_2fvj0t2fvj0t2fvj.png', // Interior
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_l4m92ol4m92ol4m9.png'  // Details/Lifestyle
 ];
 
 export function Features() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-32 md:py-48 bg-cream relative overflow-hidden">
+    <section id="features" className="py-20 md:py-28 lg:py-32 bg-cream relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         
         {/* Section Header */}
-        <div className="mb-24 md:mb-40 flex flex-col items-center text-center">
+        <div className="mb-16 md:mb-24 flex flex-col items-center text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-charcoal mb-8"
+            className="font-display text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-charcoal mb-6 md:mb-8"
           >
             {t.features.title}
           </motion.h2>
-          <div className="w-px h-24 md:h-32 bg-charcoal/20"></div>
+          <div className="w-px h-16 md:h-24 bg-charcoal/20"></div>
         </div>
 
         {/* Editorial Layout Grid */}
-        <div className="space-y-32 md:space-y-48">
+        <div className="space-y-20 md:space-y-28 lg:space-y-32">
           {t.features.items.map((item, index) => {
             const isEven = index % 2 === 0;
             
             return (
-              <div key={index} className={`flex flex-col gap-12 lg:gap-32 items-center ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+              <div key={index} className={`flex flex-col gap-10 lg:gap-16 xl:gap-20 items-center ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                 
                 {/* Image block */}
                 <motion.div 
@@ -51,8 +51,6 @@ export function Features() {
                       className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                     />
                   </div>
-                  {/* Decorative Glass Element */}
-                  <div className={`absolute top-1/2 -translate-y-1/2 ${isEven ? '-right-10' : '-left-10'} w-24 h-48 lg:w-32 lg:h-64 glass-luxe rounded-3xl hidden lg:block -z-10`}></div>
                 </motion.div>
 
                 {/* Text block */}

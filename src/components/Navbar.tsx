@@ -6,27 +6,50 @@ import { motion, AnimatePresence } from 'motion/react';
 export function Navbar() {
   const { lang, setLang, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 80);
-    window.addEventListener('scroll', handleScroll);
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      setIsScrolled(currentScrollY > 80);
+
+      // Hide if scrolling down and past 150px, show if scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 150) {
+        setIsVisible(false);
+        setIsMobileMenuOpen(false); // also hide mobile menu if open
+      } else {
+        setIsVisible(true);
+      }
+      
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleLanguage = () => setLang(lang === 'en' ? 'ru' : 'en');
   const navLinks = [
+    { name: t.nav.features, href: '#features' },
     { name: t.nav.gallery, href: '#gallery' },
     { name: t.nav.blueprints, href: '#blueprints' },
+    { name: t.nav.about, href: '#about' },
     { name: t.nav.contact, href: '#contact' },
   ];
 
   return (
     <motion.nav
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
+      animate={{ y: isVisible ? 0 : "-100%" }}
+      transition={{ 
+        duration: isVisible ? 0.2 : 0.6, 
+        ease: isVisible ? "easeOut" : [0.22, 1, 0.36, 1] 
+      }}
+      className={`fixed top-0 left-0 w-full z-50 transition-[padding] duration-300 ${
         isScrolled ? 'py-4' : 'py-8'
       }`}
     >

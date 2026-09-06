@@ -15,16 +15,16 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden flex items-center justify-center min-h-screen">
+    <section id="contact" className="py-32 relative z-10 overflow-hidden flex items-center justify-center min-h-screen">
       {/* Immersive Background */}
       <div 
         className="absolute inset-0 w-full h-full object-cover bg-center bg-cover bg-fixed"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop")',
+          backgroundImage: 'url("https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_2fvj0t2fvj0t2fvj.png")',
         }}
       ></div>
       {/* Gradient overlay for moody feel */}
-      <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-charcoal/40 backdrop-blur-[2px]"></div>
 
       <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 relative z-10 text-center">
         
@@ -34,19 +34,21 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="glass-luxe rounded-[3rem] p-8 md:p-16 lg:p-20 shadow-2xl relative overflow-hidden"
-          style={{ background: 'rgba(249, 249, 247, 0.7)' }} // Ensure bright but frosted look
+          style={{ background: 'rgba(249, 249, 247, 0.85)' }} // Slightly more opaque for better readability against the new bg
         >
-          <div className="mb-16">
-            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-charcoal mb-6">
-              {t.contact.title}
+          <div className="mb-12 lg:mb-16">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-charcoal mb-6 leading-[1.1]">
+              {t.contact.title.split('\n').map((line: string, i: number) => (
+                <span key={i} className="block">{line}</span>
+              ))}
             </h2>
             <p className="text-charcoal/70 font-light text-lg md:text-xl max-w-xl mx-auto">
               {t.contact.subtitle}
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-8 text-left">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <form onSubmit={handleSubmit} className="space-y-10 text-left max-w-2xl mx-auto">
+            <div className="flex flex-col space-y-8">
               <div className="space-y-3">
                 <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/50 ml-6">
                   {t.contact.name}
@@ -54,8 +56,8 @@ export function Contact() {
                 <input 
                   type="text" 
                   required
-                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/80 focus:ring-0 rounded-full px-8 py-5 text-charcoal placeholder-charcoal/30 outline-none transition-all duration-500 font-medium"
-                  placeholder="E.g. Jane Doe"
+                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/90 focus:ring-0 rounded-full px-8 py-5 text-charcoal placeholder-charcoal/30 outline-none transition-all duration-500 font-medium text-lg"
+                  placeholder={t.contact.namePlaceholder}
                 />
               </div>
 
@@ -66,36 +68,13 @@ export function Contact() {
                 <input 
                   type="tel" 
                   required
-                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/80 focus:ring-0 rounded-full px-8 py-5 text-charcoal placeholder-charcoal/30 outline-none transition-all duration-500 font-medium"
-                  placeholder="+1 (555) 000-0000"
+                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/90 focus:ring-0 rounded-full px-8 py-5 text-charcoal placeholder-charcoal/30 outline-none transition-all duration-500 font-medium text-lg"
+                  placeholder="+972 50 123 4567"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-3">
-                <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/50 ml-6">
-                  {t.contact.email}
-                </label>
-                <input 
-                  type="email" 
-                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/80 focus:ring-0 rounded-full px-8 py-5 text-charcoal placeholder-charcoal/30 outline-none transition-all duration-500 font-medium"
-                  placeholder="jane@example.com"
-                />
-              </div>
-
-              <div className="space-y-3">
-                <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-charcoal/50 ml-6">
-                  {t.contact.date}
-                </label>
-                <input 
-                  type="date" 
-                  className="w-full bg-white/60 backdrop-blur-lg border border-white/80 focus:border-charcoal focus:bg-white/80 focus:ring-0 rounded-full px-8 py-5 text-charcoal outline-none transition-all duration-500 font-medium"
-                />
-              </div>
-            </div>
-
-            <div className="pt-10">
+            <div className="pt-6">
               <button 
                 type="submit" 
                 disabled={submitted}

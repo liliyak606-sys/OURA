@@ -3,13 +3,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const images = [
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_3nc0lq3nc0lq3nc0.png',
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_dbvvemdbvvemdbvv.png',
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_nnmwwwnnmwwwnnmw.png',
-  'https://raw.githubusercontent.com/liliyak606-sys/OURA/refs/heads/main/public/img/Gemini_Generated_Image_p930qxp930qxp930.png',
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_3nc0lq3nc0lq3nc0.png',
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_dbvvemdbvvemdbvv.png',
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_nnmwwwnnmwwwnnmw.png',
+  'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/Gemini_Generated_Image_p930qxp930qxp930.png',
 ];
 
-const videoUrl = 'https://raw.githubusercontent.com/liliyak606-sys/OURA/main/public/img/%D1%81%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B8%CC%86_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%80%D1%83%D0%BC_%D1%82%D1%83%D1%80_%D1%8D%D1%82%D0%BE%D0%B3%D0%BE.mp4';
+const videoUrl = 'https://cdn.jsdelivr.net/gh/liliyak606-sys/OURA@main/public/img/%D1%81%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%80%D1%83%D0%B8%CC%86_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D1%80%D1%83%D0%BC_%D1%82%D1%83%D1%80_%D1%8D%D1%82%D0%BE%D0%B3%D0%BE.mp4';
 
 export function Gallery() {
   const { t } = useLanguage();

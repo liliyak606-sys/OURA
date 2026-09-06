@@ -2,8 +2,11 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { Gallery } from './components/Gallery';
+import { SmallCTA } from './components/SmallCTA';
 import { Blueprints } from './components/Blueprints';
+import { About } from './components/About';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
 
 export default function App() {
@@ -15,15 +18,12 @@ export default function App() {
           <Hero />
           <Features />
           <Gallery />
+          <SmallCTA />
           <Blueprints />
+          <About />
           <Contact />
         </main>
-        
-        <footer className="bg-charcoal text-white py-14 text-center">
-          <p className="text-white/40 text-xs tracking-[0.2em] uppercase font-medium">
-            © {new Date().getFullYear()} AURA | Tel Aviv. All rights reserved.
-          </p>
-        </footer>
+        <Footer />
       </div>
     </LanguageProvider>
   );
